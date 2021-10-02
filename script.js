@@ -36,8 +36,8 @@ function fetchMovie() {
        <p class="release_date"></p>
        <img class="poster" src="" alt="">
        <div class="like_view">
-          <span><i class="fas fa-heart"></i><span class="likes"></span></span>
-          <span><i class="fas fa-eye"></i><span class="popularity"></span></span>
+          <span><i style="color:red;" class="fas fa-heart"></i><span class="likes"></span></span>
+          <span><i style="color:blue;" class="fas fa-eye"></i><span class="popularity"></span></span>
        </div>
     </div>
     `;
@@ -69,7 +69,8 @@ function showTrailer(movie){
     let obj = data.data.results[0];
     if(obj.hasOwnProperty('key')){
       let videoKey = obj.key;
-      localStorage.setItem('id',videoKey);
+      console.log(videoKey)
+     localStorage.setItem('id',videoKey);
     }
   })
   
